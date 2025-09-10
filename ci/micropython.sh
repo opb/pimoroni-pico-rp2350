@@ -119,7 +119,7 @@ function ci_cmake_build {
     ccache --show-stats || true
 
     if [ -z ${CI_RELEASE_FILENAME+x} ]; then
-        $CI_RELEASE_FILENAME=$BOARD
+        CI_RELEASE_FILENAME="$BOARD"
     fi
 
     log_inform "Copying .uf2 to $(pwd)/$CI_RELEASE_FILENAME.uf2"
