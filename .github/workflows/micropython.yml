@@ -31,12 +31,12 @@ jobs:
     steps:
     - name: Compiler Cache Fixup
       run: |
-        mkdir -p /home/runner/.ccache
+        mkdir -p /home/gha/.ccache
   
     - name: "CCache: Restore saved cache"
       uses: actions/cache@v4
       with:
-        path: /home/runner/.ccache
+        path: /home/gha/.ccache
         key: ccache-micropython-${{ matrix.name }}-${{ github.ref }}-${{ github.sha }}
         restore-keys: |
           ccache-micropython-${{ matrix.name }}-${{ github.ref }}
