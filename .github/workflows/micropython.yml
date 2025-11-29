@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: MicroPython ${{ matrix.name }}
-    runs-on: ubuntu-24.04
+    runs-on: self-hosted
     continue-on-error: true
     strategy:
       matrix:
