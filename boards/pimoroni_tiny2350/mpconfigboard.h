@@ -7,6 +7,7 @@
 
 // Enable WiFi & PPP
 #define MICROPY_PY_NETWORK                      (1)
+#define MICROPY_PY_NETWORK_PPP_LWIP             (1)
 
 // I2C0 (non-default)
 #define MICROPY_HW_I2C0_SCL  (4)
