@@ -9,6 +9,11 @@ set(MICROPY_FROZEN_MANIFEST ${MICROPY_BOARD_DIR}/manifest.py)
 # Picked up and expanded upon in mpconfigboard.h
 set(MICROPY_PY_LWIP ON)
 
+# Links cyw43-driver and sets:
+# MICROPY_PY_NETWORK_CYW43 = 1,
+# MICROPY_PY_SOCKET_DEFAULT_TIMEOUT_MS = 30000
+set(MICROPY_PY_NETWORK_CYW43 ON)
+
 set(MICROPY_C_HEAP_SIZE 4096)
 
 include(${CMAKE_CURRENT_LIST_DIR}/../common.cmake)
