@@ -12,3 +12,8 @@
 // I2C0 (non-default)
 #define MICROPY_HW_I2C0_SCL  (4)
 #define MICROPY_HW_I2C0_SDA  (5)
+
+// PICO_CONFIG: CYW43_DEFAULT_PIN_WL_HOST_WAKE, gpio (irq) pin for the irq line from the cyw43 chip, type=int, default=24, advanced=true, group=pico_cyw43_driver
+#ifndef CYW43_DEFAULT_PIN_WL_HOST_WAKE
+#define CYW43_DEFAULT_PIN_WL_HOST_WAKE 24u
+#endif
